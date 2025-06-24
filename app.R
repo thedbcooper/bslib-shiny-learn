@@ -1,25 +1,14 @@
 # https://shiny.posit.co/blog/posts/bslib-dashboards/#hello-dashboards
 
+# load packages
 library(shiny)
 library(bslib)
 library(ggplot2)
 
 
 # Setup -------------------------------------------------------------------
-
-data(penguins, package = "palmerpenguins")
-
-# In order for auto/custom fonts to work properly, you'll want
-# either the ragg (or showtext) package installed
-library(ragg)
-
-# If you want `{ragg}` to handle the font rendering in a Shiny app
-options(shiny.useragg = TRUE)
-
-# Call thematic_shiny() prior to launching the app, to change
-# R plot theming defaults for all the plots generated in the app
-thematic::thematic_shiny(font = "auto")
-theme_set(theme_bw(base_size = 16))
+# load data
+penguins <- palmerpenguins::penguins
 
 # Calculate column means for the value boxes
 means <- colMeans(

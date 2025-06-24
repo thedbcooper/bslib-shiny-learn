@@ -1,2 +1,5 @@
 *.Rproj
 *.code-workspace
+.Rproj.user
+.Rhistory
+*.pdf
