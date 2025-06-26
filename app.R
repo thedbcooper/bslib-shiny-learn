@@ -5,7 +5,6 @@ library(shiny)
 library(bslib)
 library(ggplot2)
 
-
 # Setup -------------------------------------------------------------------
 # load data
 penguins <- palmerpenguins::penguins
@@ -15,7 +14,6 @@ means <- colMeans(
   penguins[c("bill_length_mm", "bill_length_mm", "body_mass_g")],
   na.rm = TRUE
 )
-
 
 # UI ----------------------------------------------------------------------
 
@@ -67,7 +65,6 @@ ui <- page_sidebar(
   )
 )
 
-
 # Server ------------------------------------------------------------------
 
 server <- function(input, output) {
@@ -82,7 +79,6 @@ server <- function(input, output) {
   output$bill_depth <- renderPlot(gg_plot() + aes(bill_depth_mm))
   output$body_mass <- renderPlot(gg_plot() + aes(body_mass_g))
 }
-
 
 # Shiny App ---------------------------------------------------------------
 
