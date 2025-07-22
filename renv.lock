@@ -5,6 +5,10 @@
       {
         "Name": "RSPM",
         "URL": "https://packagemanager.posit.co/cran/latest"
+      },
+      {
+        "Name": "CRAN",
+        "URL": "https://cloud.r-project.org"
       }
     ]
   },
